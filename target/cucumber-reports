@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Cucumber</title>
+	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+	<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22ml-3%20ml-md-0%22%20viewBox%3D%220%200%2040.59%2046.31%22%20width%3D%2240.59%22%20height%3D%2246.31%22%3E%0A%20%20%20%20%3Cg%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20fill%3D%22%2323d96c%22%20fill-rule%3D%22evenodd%22%20d%3D%22M30.283%203.645q-.528-.317-1.08-.593a16.164%2016.164%200%2000-1.154-.518c-.124-.052-.247-.1-.372-.149-.343-.127-.689-.268-1.042-.371a19.427%2019.427%200%2010-9.792%2037.51v5.56c11.676-1.753%2022.016-10.979%2022.787-23.093.459-7.289-3.193-14.73-9.347-18.346z%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20fill%3D%22%23173647%22%20d%3D%22M15.787%2046.307v-5.935A20.472%2020.472%200%201126.959%201.015c.274.08.557.187.832.291l.248.093c.165.064.291.113.417.167.348.137.739.313%201.208.543q.589.295%201.153.633c6.393%203.756%2010.354%2011.518%209.857%2019.316-.763%2012-10.722%2022.122-23.679%2024.067zm4.8-44.214h-.026a18.366%2018.366%200%2000-3.524%2036.408l.85.165v5.18c11.392-2.224%2020.009-11.272%2020.686-21.922.448-7.033-3.1-14.018-8.83-17.383l-.008-.005A14.691%2014.691%200%200027.654%203.5a5.74%205.74%200%2000-.344-.138l-.27-.1a9.49%209.49%200%2000-.708-.249%2018.425%2018.425%200%2000-5.743-.92z%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20fill%3D%22%23173647%22%20fill-rule%3D%22evenodd%22%20d%3D%22M16.666%2010.58a1.8%201.8%200%20011.583.608%204.184%204.184%200%2001.728%201.107c.645%201.422%201.027%203.461.23%204.605a6.334%206.334%200%2001-3.981-3.087%203.236%203.236%200%2001-.347-1.339%201.957%201.957%200%20011.787-1.894zm-5.683%208.025a7.742%207.742%200%20001.218.737%205.789%205.789%200%20004.883-.138%206.116%206.116%200%2000-3.345-3.45%203.664%203.664%200%2000-1.442-.321%201.884%201.884%200%2000-.319%200%201.766%201.766%200%2000-.995%203.172zm6.1%203.433c-.777-.518-2.379-.309-3.312-.292a4.416%204.416%200%2000-1.666.352%203.5%203.5%200%2000-1.218.738%201.817%201.817%200%20001.409%203.171%203.3%203.3%200%20001.442-.321c1.436-.62%203.141-2.32%203.346-3.648zm2.61%202a6.556%206.556%200%2000-3.724%203.506%203.091%203.091%200%2000-.321%201.314%201.907%201.907%200%20003.3%201.346%207.422%207.422%200%2000.7-1.218c.621-1.333.866-3.72.046-4.948zm2.557-7.167a5.941%205.941%200%20003.7-3.167%203.243%203.243%200%2000.319-1.346%201.915%201.915%200%2000-1.794-1.954%201.832%201.832%200%2000-1.6.641%207.382%207.382%200%2000-.705%201.218c-.62%201.434-.842%203.48.081%204.603zm4.208%2012.115a3.244%203.244%200%2000-.321-1.345%205.869%205.869%200%2000-3.554-3.269%205.386%205.386%200%2000-.226%204.711%204.147%204.147%200%2000.7%201.121c1.133%201.23%203.505.32%203.402-1.218zm4.2-6.28a7.466%207.466%200%2000-1.217-.7%204.425%204.425%200%2000-1.666-.352%206.4%206.4%200%2000-3.188.555%205.959%205.959%200%20003.316%203.386%203.672%203.672%200%20001.442.32%201.8%201.8%200%20001.31-3.209z%22%2F%3E%0A%20%20%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E">
+	<style>
+.cucumber-react .cucumber-status--passed {
+  color: #2CB14A;
+}
+.cucumber-react .cucumber-status--skipped {
+  color: #00A0CC;
+}
+.cucumber-react .cucumber-status--pending {
+  color: #FFAD33;
+}
+.cucumber-react .cucumber-status--undefined {
+  color: #FFAD33;
+}
+.cucumber-react .cucumber-status--ambiguous {
+  color: #F4EBFD;
+}
+.cucumber-react .cucumber-status--failed {
+  color: #BB0000;
+}
+.cucumber-react .cucumber-status--unknown {
+  color: #B6BECB;
+}
+.cucumber-react h1, .cucumber-react h2, .cucumber-react h3 {
+  padding: 0;
+  margin: 0;
+}
+.cucumber-react a {
+  color: inherit;
+}
+.cucumber-react .gherkin-document-list {
+  font: 14px "Open Sans", sans-serif;
+  color: #161C24;
+  background: #fff;
+  overflow-x: hidden;
+}
+.cucumber-react .cucumber-title {
+  margin-top: 0.3em;
+  margin-bottom: 0;
+  display: inline-block;
+}
+.cucumber-react .cucumber-title__keyword {
+  font-weight: bold;
+}
+.cucumber-react .cucumber-title__text {
+  font-weight: normal;
+}
+.cucumber-react .cucumber-tags {
+  padding: 0;
+  margin-bottom: 0;
+}
+.cucumber-react .cucumber-tags .cucumber-tag {
+  display: inline;
+  list-style-type: none;
+  padding: 4px 8px 4px 8px;
+  margin-right: 6px;
+  background-color: #FFFFFF;
+  border-radius: 6px;
+}
+.cucumber-react .cucumber-feature__icon {
+  padding-top: 0.35em;
+  padding-right: 0.5em;
+}
+.cucumber-react .cucumber-description,
+.cucumber-react .cucumber-children {
+  margin-left: 1em;
+}
+.cucumber-react .cucumber-feature,
+.cucumber-react .cucumber-rule,
+.cucumber-react .cucumber-scenario,
+.cucumber-react .cucumber-background {
+  margin-bottom: 1em;
+}
+.cucumber-react .cucumber-steps {
+  list-style-type: none;
+  padding-left: 10px;
+}
+.cucumber-react .cucumber-steps .cucumber-step {
+  display: flex;
+}
+.cucumber-react .cucumber-steps .cucumber-step__status {
+  padding-top: 0.2em;
+  padding-right: 0.5em;
+}
+.cucumber-react .cucumber-steps .cucumber-step__content {
+  flex-grow: 1;
+  max-width: calc(100% - 1.5em);
+}
+.cucumber-react .cucumber-steps .cucumber-step__keyword {
+  font-weight: bold;
+}
+.cucumber-react .cucumber-steps .cucumber-step__text {
+  font-weight: normal;
+}
+.cucumber-react .cucumber-steps .cucumber-step__param {
+  font-weight: normal;
+  font-style: italic;
+}
+.cucumber-react .cucumber-table {
+  border-collapse: collapse;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+.cucumber-react .cucumber-table__header-cell {
+  border: 1px solid #4B5662;
+  padding: 0.3em;
+}
+.cucumber-react .cucumber-table__cell {
+  border: 1px solid #4B5662;
+  padding: 0.3em;
+}
+.cucumber-react .cucumber-table__cell__status {
+  padding: 0.5em 3px 3px 3px;
+}
+.cucumber-react .cucumber-table__cell__step {
+  flex-grow: 1;
+}
+.cucumber-react .cucumber-code {
+  padding: 0.25em;
+  background-color: #ebebeb;
+}
+.cucumber-react .cucumber-error {
+  padding: 0.5em;
+  margin: 0;
+  overflow-x: auto;
+}
+.cucumber-react .cucumber-no-documents {
+  font: 14px "Open Sans", sans-serif;
+}
+.cucumber-react .cucumber-attachment__icon {
+  margin-right: 0.5em;
+}
+.cucumber-react .cucumber-attachment__image {
+  max-width: 100%;
+  margin-top: 1em;
+}
+.cucumber-react .cucumber-attachment__text {
+  background-color: #ebebeb;
+  padding: 0.5em;
+  overflow-x: auto;
+}
+.cucumber-react .cucumber-anchor {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 0.3em;
+}
+.cucumber-react .cucumber-anchor__link {
+  opacity: 0;
+  transition: all 0.35s ease-in-out;
+  position: absolute;
+  left: -20px;
+  display: flex;
+  align-items: center;
+}
+.cucumber-react .cucumber-anchor__icon {
+  margin-right: 0.5em;
+}
+.cucumber-react .cucumber-anchor:hover a {
+  opacity: 1;
+  width: max-content;
+  transition: all 0.35s ease-in-out;
+}
+.cucumber-react .cucumber-anchor > * {
+  height: 100%;
+  margin-top: 0px;
+}
+
+.cucumber-report-header {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font: 11px "Open Sans", sans-serif;
+  margin-bottom: 1em;
+}
+.cucumber-report-header > * {
+  padding: 1em;
+}
+.cucumber-report-header .cucumber-status-filter {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.cucumber-report-header .cucumber-status-filter table {
+  width: 100%;
+}
+.cucumber-report-header .cucumber-execution-data {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.cucumber-report-header .cucumber-search-bar {
+  border-right: 0;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-search {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 9fr 1fr;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-search input {
+  padding: 0.4em;
+  border-radius: 0;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-search button {
+  height: 2.2em;
+  padding-left: 0.6em;
+  padding-right: 0.6em;
+}
+.cucumber-report-header .cucumber-search-bar p.help {
+  font-size: 80%;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul {
+  display: inline;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul li {
+  list-style-type: none;
+  display: inline-block;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul li input {
+  display: inline-block;
+  width: auto;
+  height: 0.6em;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul li label {
+  padding-right: 1em;
+}
+
+@media only screen and (min-width: 600px) {
+  .cucumber-report-header {
+    grid-template-columns: 1fr 1fr;
+  }
+  .cucumber-report-header .cucumber-status-filter {
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .cucumber-report-header .cucumber-search-bar {
+    grid-column: 1/-1;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .cucumber-report-header {
+    grid-template-columns: 1fr 1fr 2fr;
+  }
+  .cucumber-report-header .cucumber-status-filter {
+    border-bottom: 0;
+  }
+  .cucumber-report-header .cucumber-execution-data {
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 0;
+  }
+  .cucumber-report-header .cucumber-search-bar {
+    grid-column: auto;
+  }
+}
+.accordion {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+}
+
+.accordion__item + .accordion__item {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.accordion__button {
+    background-color: #f4f4f4;
+    color: #444;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    border: none;
+}
+
+.accordion__button:hover {
+    background-color: #ddd;
+}
+
+.accordion__button:before {
+    display: inline-block;
+    content: '';
+    height: 10px;
+    width: 10px;
+    margin-right: 12px;
+    border-bottom: 2px solid currentColor;
+    border-right: 2px solid currentColor;
+    transform: rotate(-45deg);
+}
+
+.accordion__button[aria-expanded='true']::before,
+.accordion__button[aria-selected='true']::before {
+    transform: rotate(45deg);
+}
+
+.accordion__panel {
+    padding: 20px;
+    animation: fadein 0.35s ease-in;
+}
+
+	</style>
+</head>
+<body>
+<div id="content">
+</div>
+<script>
+window.CUCUMBER_MESSAGES = [{"meta":{"protocolVersion":"15.0.0","implementation":{"name":"cucumber-jvm","version":"6.10.4"},"runtime":{"name":"Java HotSpot(TM) 64-Bit Server VM","version":"25.333-b02"},"os":{"name":"Mac OS X"},"cpu":{"name":"x86_64"}}},{"testRunStarted":{"timestamp":{"seconds":"1712481525","nanos":504000000}}},{"source":{"uri":"file:///Users/ayobamielutade/Desktop/Tech%20Stack%202024/mobile-app%20automation/appium/affinityClick/src/test/resources/features/getCredit.feature","data":"Feature: Get credits\n\n  As a user\n  I want to log into the app\n  So that I can purchase credits successfully\n\n  Scenario: Validate user can purchase credits successfully\n    Given I am on the login screen in Get Credits Steps\n    When I enter valid username and password in Get Credits Steps\n    And I tap the login button in Get Credits Steps\n    And I accept all permissions in Get Credits Steps\n    Then I should be able to purchase credits successfully\n","mediaType":"text/x.cucumber.gherkin+plain"}},{"gherkinDocument":{"uri":"file:///Users/ayobamielutade/Desktop/Tech%20Stack%202024/mobile-app%20automation/appium/affinityClick/src/test/resources/features/getCredit.feature","feature":{"location":{"line":1,"column":1},"language":"en","keyword":"Feature","name":"Get credits","description":"  As a user\n  I want to log into the app\n  So that I can purchase credits successfully","children":[{"scenario":{"location":{"line":7,"column":3},"keyword":"Scenario","name":"Validate user can purchase credits successfully","steps":[{"location":{"line":8,"column":5},"keyword":"Given ","text":"I am on the login screen in Get Credits Steps","id":"abaac3cf-7cdc-422a-ac17-d561ca0ed8be"},{"location":{"line":9,"column":5},"keyword":"When ","text":"I enter valid username and password in Get Credits Steps","id":"8c8405ad-80be-4980-a234-65d12b786b35"},{"location":{"line":10,"column":5},"keyword":"And ","text":"I tap the login button in Get Credits Steps","id":"b2e8fb57-3077-421a-8f2c-839cdb223c8f"},{"location":{"line":11,"column":5},"keyword":"And ","text":"I accept all permissions in Get Credits Steps","id":"12dc5e8a-f158-4250-9492-7eeac9322f92"},{"location":{"line":12,"column":5},"keyword":"Then ","text":"I should be able to purchase credits successfully","id":"b2377c01-82c3-4aa6-a8ff-64399b287f3e"}],"id":"7f0e8621-1a76-4f23-a407-be8258940bf6"}}]}}},{"pickle":{"id":"a55a22ec-8220-4fd8-903c-289f487a362d","uri":"file:///Users/ayobamielutade/Desktop/Tech%20Stack%202024/mobile-app%20automation/appium/affinityClick/src/test/resources/features/getCredit.feature","name":"Validate user can purchase credits successfully","language":"en","steps":[{"text":"I am on the login screen in Get Credits Steps","id":"993cd10a-a773-4376-907c-08b924265a1f","astNodeIds":["abaac3cf-7cdc-422a-ac17-d561ca0ed8be"]},{"text":"I enter valid username and password in Get Credits Steps","id":"9adc6a96-4cd0-4425-8b38-a8447ca7b29d","astNodeIds":["8c8405ad-80be-4980-a234-65d12b786b35"]},{"text":"I tap the login button in Get Credits Steps","id":"00e41895-e796-4039-b684-62e8627a4514","astNodeIds":["b2e8fb57-3077-421a-8f2c-839cdb223c8f"]},{"text":"I accept all permissions in Get Credits Steps","id":"8fe3b47f-b6d9-4278-bee0-871c923021e8","astNodeIds":["12dc5e8a-f158-4250-9492-7eeac9322f92"]},{"text":"I should be able to purchase credits successfully","id":"3bda1328-3042-458a-8d70-66041f4f603a","astNodeIds":["b2377c01-82c3-4aa6-a8ff-64399b287f3e"]}],"astNodeIds":["7f0e8621-1a76-4f23-a407-be8258940bf6"]}},{"source":{"uri":"file:///Users/ayobamielutade/Desktop/Tech%20Stack%202024/mobile-app%20automation/appium/affinityClick/src/test/resources/features/incorrectLogin.feature","data":"Feature: Inability to Login to the app\n\n  As a user\n  I want to enter invalid login credentials during a login process\n  So that I cannot access my account\n\n  Scenario: Validate user cannot login to the app with invalid login credentials\n    Given I am on the login screen of the app\n    When I enter valid username and password on the app\n    And I tap the login button on the app\n    And I accept the got it permission\n    Then I should be not be logged in successfully\n","mediaType":"text/x.cucumber.gherkin+plain"}},{"gherkinDocument":{"uri":"file:///Users/ayobamielutade/Desktop/Tech%20Stack%202024/mobile-app%20automation/appium/affinityClick/src/test/resources/features/incorrectLogin.feature","feature":{"location":{"line":1,"column":1},"language":"en","keyword":"Feature","name":"Inability to Login to the app","description":"  As a user\n  I want to enter invalid login credentials during a login process\n  So that I cannot access my account","children":[{"scenario":{"location":{"line":7,"column":3},"keyword":"Scenario","name":"Validate user cannot login to the app with invalid login credentials","steps":[{"location":{"line":8,"column":5},"keyword":"Given ","text":"I am on the login screen of the app","id":"13b9c448-8fe9-4024-940e-1dcdb35183a4"},{"location":{"line":9,"column":5},"keyword":"When ","text":"I enter valid username and password on the app","id":"9bfdb310-79cf-4ad5-b27d-ce562674f906"},{"location":{"line":10,"column":5},"keyword":"And ","text":"I tap the login button on the app","id":"5b2ac6ca-f866-482e-9963-90a845173b19"},{"location":{"line":11,"column":5},"keyword":"And ","text":"I accept the got it permission","id":"0e58366c-4a04-4c62-8aa1-d1608eda4791"},{"location":{"line":12,"column":5},"keyword":"Then ","text":"I should be not be logged in successfully","id":"c411626e-2e56-4d71-8e64-a1fdc8680d96"}],"id":"f0a8a7e1-52ba-46c1-996c-994157c5748d"}}]}}},{"pickle":{"id":"600ae91a-ab1f-405d-883e-fdd6f44efc3a","uri":"file:///Users/ayobamielutade/Desktop/Tech%20Stack%202024/mobile-app%20automation/appium/affinityClick/src/test/resources/features/incorrectLogin.feature","name":"Validate user cannot login to the app with invalid login credentials","language":"en","steps":[{"text":"I am on the login screen of the app","id":"3bc963db-43d8-4358-a45f-4e7915ef86ef","astNodeIds":["13b9c448-8fe9-4024-940e-1dcdb35183a4"]},{"text":"I enter valid username and password on the app","id":"f50dbf47-474a-48c0-82bc-1ad91bdb71d1","astNodeIds":["9bfdb310-79cf-4ad5-b27d-ce562674f906"]},{"text":"I tap the login button on the app","id":"87aef02d-40eb-4f60-a12e-b6eb49105a65","astNodeIds":["5b2ac6ca-f866-482e-9963-90a845173b19"]},{"text":"I accept the got it permission","id":"5f9bbe16-374c-41e4-98ac-953e1c827ef5","astNodeIds":["0e58366c-4a04-4c62-8aa1-d1608eda4791"]},{"text":"I should be not be logged in successfully","id":"6f67aeb2-45b3-42d0-b768-5232474d3a03","astNodeIds":["c411626e-2e56-4d71-8e64-a1fdc8680d96"]}],"astNodeIds":["f0a8a7e1-52ba-46c1-996c-994157c5748d"]}},{"source":{"uri":"file:///Users/ayobamielutade/Desktop/Tech%20Stack%202024/mobile-app%20automation/appium/affinityClick/src/test/resources/features/incorrectSignUp.feature","data":"Feature: Incorrect Sign up to the app\n\n  As a user\n  I want to enter incorrect sign up details into the app during a sign up process\n  So that I cannot create an account\n\n  Scenario: Validate user cannot signup to the app with invalid sign up credentials\n    Given I am on the signup screen\n    When I enter invalid username and password combination for the signUp step\n    And I tap the second signUp button\n    Then I should see an error stating I provided a wrong email address\n\n","mediaType":"text/x.cucumber.gherkin+plain"}},{"gherkinDocument":{"uri":"file:///Users/ayobamielutade/Desktop/Tech%20Stack%202024/mobile-app%20automation/appium/affinityClick/src/test/resources/features/incorrectSignUp.feature","feature":{"location":{"line":1,"column":1},"language":"en","keyword":"Feature","name":"Incorrect Sign up to the app","description":"  As a user\n  I want to enter incorrect sign up details into the app during a sign up process\n  So that I cannot create an account","children":[{"scenario":{"location":{"line":7,"column":3},"keyword":"Scenario","name":"Validate user cannot signup to the app with invalid sign up credentials","steps":[{"location":{"line":8,"column":5},"keyword":"Given ","text":"I am on the signup screen","id":"2acc0a8b-b0f2-41bb-9100-827affeb5a0d"},{"location":{"line":9,"column":5},"keyword":"When ","text":"I enter invalid username and password combination for the signUp step","id":"c942ba13-4895-4656-a9f6-591d5c921266"},{"location":{"line":10,"column":5},"keyword":"And ","text":"I tap the second signUp button","id":"c42ad724-4c34-40bb-8985-8393203a0ca5"},{"location":{"line":11,"column":5},"keyword":"Then ","text":"I should see an error stating I provided a wrong email address","id":"055a05a1-c3d0-4754-9382-8f5ca3a66341"}],"id":"d9d46c64-5290-492d-bd92-7c29fc1e5d09"}}]}}},{"pickle":{"id":"0aa1d5a0-878d-48a4-808e-0191d30cb747","uri":"file:///Users/ayobamielutade/Desktop/Tech%20Stack%202024/mobile-app%20automation/appium/affinityClick/src/test/resources/features/incorrectSignUp.feature","name":"Validate user cannot signup to the app with invalid sign up credentials","language":"en","steps":[{"text":"I am on the signup screen","id":"8d732180-6d70-46eb-b695-c1b49a326ba6","astNodeIds":["2acc0a8b-b0f2-41bb-9100-827affeb5a0d"]},{"text":"I enter invalid username and password combination for the signUp step","id":"2da2d811-6a00-49fb-ba2e-67c8fdf9f1dd","astNodeIds":["c942ba13-4895-4656-a9f6-591d5c921266"]},{"text":"I tap the second signUp button","id":"bd84cb79-baa1-4af6-9800-4dfe6fccc95c","astNodeIds":["c42ad724-4c34-40bb-8985-8393203a0ca5"]},{"text":"I should see an error stating I provided a wrong email address","id":"429a85c1-9e51-4fcb-996b-d98a0feee697","astNodeIds":["055a05a1-c3d0-4754-9382-8f5ca3a66341"]}],"astNodeIds":["d9d46c64-5290-492d-bd92-7c29fc1e5d09"]}},{"source":{"uri":"file:///Users/ayobamielutade/Desktop/Tech%20Stack%202024/mobile-app%20automation/appium/affinityClick/src/test/resources/features/login.feature","data":"Feature: Login to the app\n\n  As a user\n  I want to log into the app\n  So that I can access my account\n\n  Scenario: Validate user can login with valid login credentials\n    Given I am on the login screen\n    When I enter valid username and password\n    And I tap the login button\n    And I accept all permissions\n    Then I should be logged in successfully\n","mediaType":"text/x.cucumber.gherkin+plain"}},{"gherkinDocument":{"uri":"file:///Users/ayobamielutade/Desktop/Tech%20Stack%202024/mobile-app%20automation/appium/affinityClick/src/test/resources/features/login.feature","feature":{"location":{"line":1,"column":1},"language":"en","keyword":"Feature","name":"Login to the app","description":"  As a user\n  I want to log into the app\n  So that I can access my account","children":[{"scenario":{"location":{"line":7,"column":3},"keyword":"Scenario","name":"Validate user can login with valid login credentials","steps":[{"location":{"line":8,"column":5},"keyword":"Given ","text":"I am on the login screen","id":"b490a045-c07f-4cab-8928-d75777b49db9"},{"location":{"line":9,"column":5},"keyword":"When ","text":"I enter valid username and password","id":"841981ac-e599-455e-ac77-e87f19091937"},{"location":{"line":10,"column":5},"keyword":"And ","text":"I tap the login button","id":"3b8bd174-a6e0-47c4-9b19-d876dda8df95"},{"location":{"line":11,"column":5},"keyword":"And ","text":"I accept all permissions","id":"72e69349-e32a-4b65-8e55-55cd87eaa43b"},{"location":{"line":12,"column":5},"keyword":"Then ","text":"I should be logged in successfully","id":"a2bbcfa6-05ac-4924-8601-9fc4dacf5058"}],"id":"fb912eb7-4a68-406e-94fd-a2f6ce4a0fd0"}}]}}},{"pickle":{"id":"a72db12a-1a20-4d1a-a0e8-e81401b2dd04","uri":"file:///Users/ayobamielutade/Desktop/Tech%20Stack%202024/mobile-app%20automation/appium/affinityClick/src/test/resources/features/login.feature","name":"Validate user can login with valid login credentials","language":"en","steps":[{"text":"I am on the login screen","id":"025120a6-6535-4caf-9c1f-7c1a038f9cdf","astNodeIds":["b490a045-c07f-4cab-8928-d75777b49db9"]},{"text":"I enter valid username and password","id":"f911d059-038d-41a2-b1e3-1026351a6caf","astNodeIds":["841981ac-e599-455e-ac77-e87f19091937"]},{"text":"I tap the login button","id":"970c0729-b334-46a7-8534-1698a4f62aa9","astNodeIds":["3b8bd174-a6e0-47c4-9b19-d876dda8df95"]},{"text":"I accept all permissions","id":"f40e76d8-b5bf-4444-8bf0-d67e370f8571","astNodeIds":["72e69349-e32a-4b65-8e55-55cd87eaa43b"]},{"text":"I should be logged in successfully","id":"3804009e-d267-4524-9a95-21aec6195e9a","astNodeIds":["a2bbcfa6-05ac-4924-8601-9fc4dacf5058"]}],"astNodeIds":["fb912eb7-4a68-406e-94fd-a2f6ce4a0fd0"]}},{"source":{"uri":"file:///Users/ayobamielutade/Desktop/Tech%20Stack%202024/mobile-app%20automation/appium/affinityClick/src/test/resources/features/purchaseNumber.feature","data":"Feature: Purchase number\n\n  As a user\n  I want to log into the app\n  So that I can purchase a number successfully\n\nScenario: Validate user can purchase a number successfully\n  Given I am on the login screen in Purchase Number Steps\n When I enter valid username and password in Purchase Number Steps\n And I tap the login button in Purchase Number Steps\n And I accept all permissions in Purchase Number Steps\n Then I should be able to purchase a number successfully\n","mediaType":"text/x.cucumber.gherkin+plain"}},{"gherkinDocument":{"uri":"file:///Users/ayobamielutade/Desktop/Tech%20Stack%202024/mobile-app%20automation/appium/affinityClick/src/test/resources/features/purchaseNumber.feature","feature":{"location":{"line":1,"column":1},"language":"en","keyword":"Feature","name":"Purchase number","description":"  As a user\n  I want to log into the app\n  So that I can purchase a number successfully","children":[{"scenario":{"location":{"line":7,"column":1},"keyword":"Scenario","name":"Validate user can purchase a number successfully","steps":[{"location":{"line":8,"column":3},"keyword":"Given ","text":"I am on the login screen in Purchase Number Steps","id":"6076b68d-e510-49aa-81ae-b718ecfe494b"},{"location":{"line":9,"column":2},"keyword":"When ","text":"I enter valid username and password in Purchase Number Steps","id":"103a7bb0-bc54-4208-b2dd-353aaa4dc6e9"},{"location":{"line":10,"column":2},"keyword":"And ","text":"I tap the login button in Purchase Number Steps","id":"a845deb8-28a6-4b84-b291-21419dd086d7"},{"location":{"line":11,"column":2},"keyword":"And ","text":"I accept all permissions in Purchase Number Steps","id":"1b8dc2c3-2efd-4a31-9bb5-2a76bce336b9"},{"location":{"line":12,"column":2},"keyword":"Then ","text":"I should be able to purchase a number successfully","id":"cbe9d7c3-a092-4837-9292-01aac17cd258"}],"id":"cac164e8-a46d-4198-aab2-77d6901648e8"}}]}}},{"pickle":{"id":"97702081-7894-4e89-bfbd-570a48614807","uri":"file:///Users/ayobamielutade/Desktop/Tech%20Stack%202024/mobile-app%20automation/appium/affinityClick/src/test/resources/features/purchaseNumber.feature","name":"Validate user can purchase a number successfully","language":"en","steps":[{"text":"I am on the login screen in Purchase Number Steps","id":"3e815acf-e645-4673-83e7-50b051478ef3","astNodeIds":["6076b68d-e510-49aa-81ae-b718ecfe494b"]},{"text":"I enter valid username and password in Purchase Number Steps","id":"e4a644a0-7cbf-4254-8304-9ab896e08fff","astNodeIds":["103a7bb0-bc54-4208-b2dd-353aaa4dc6e9"]},{"text":"I tap the login button in Purchase Number Steps","id":"383f4986-f33f-4582-907a-9ba4cd5ee8e0","astNodeIds":["a845deb8-28a6-4b84-b291-21419dd086d7"]},{"text":"I accept all permissions in Purchase Number Steps","id":"6cc4b8f2-eda8-4922-937b-d93a30ceeb36","astNodeIds":["1b8dc2c3-2efd-4a31-9bb5-2a76bce336b9"]},{"text":"I should be able to purchase a number successfully","id":"d9a17dda-ade2-4050-853d-baa8a29aaf13","astNodeIds":["cbe9d7c3-a092-4837-9292-01aac17cd258"]}],"astNodeIds":["cac164e8-a46d-4198-aab2-77d6901648e8"]}},{"source":{"uri":"file:///Users/ayobamielutade/Desktop/Tech%20Stack%202024/mobile-app%20automation/appium/affinityClick/src/test/resources/features/settings.feature","data":"Feature: Access Settings from Main Menu\n\n  As a user\n  I want to log into the app\n  So that I can access my settings menu\n\n  Scenario: Validate user can navigate to Settings from Main Menu\n    Given I am on the login screen in Settings Steps\n    When I enter valid username and password in Settings Steps\n    And I tap the login button in Settings Steps\n    And I accept all permissions in Settings Steps\n    And I should be logged in successfully in Settings Steps\n    And I click Settings from the Main Menu\n","mediaType":"text/x.cucumber.gherkin+plain"}},{"gherkinDocument":{"uri":"file:///Users/ayobamielutade/Desktop/Tech%20Stack%202024/mobile-app%20automation/appium/affinityClick/src/test/resources/features/settings.feature","feature":{"location":{"line":1,"column":1},"language":"en","keyword":"Feature","name":"Access Settings from Main Menu","description":"  As a user\n  I want to log into the app\n  So that I can access my settings menu","children":[{"scenario":{"location":{"line":7,"column":3},"keyword":"Scenario","name":"Validate user can navigate to Settings from Main Menu","steps":[{"location":{"line":8,"column":5},"keyword":"Given ","text":"I am on the login screen in Settings Steps","id":"c318c64d-98ab-4122-9696-17fdce4eb7ef"},{"location":{"line":9,"column":5},"keyword":"When ","text":"I enter valid username and password in Settings Steps","id":"92026486-e12e-40ee-b0a3-1b9978d9cf5c"},{"location":{"line":10,"column":5},"keyword":"And ","text":"I tap the login button in Settings Steps","id":"3abe809f-ef6d-47f5-acca-d0cfe5cbf23f"},{"location":{"line":11,"column":5},"keyword":"And ","text":"I accept all permissions in Settings Steps","id":"d5580908-76e0-457d-bf8d-dd82a681f051"},{"location":{"line":12,"column":5},"keyword":"And ","text":"I should be logged in successfully in Settings Steps","id":"284dc174-1e73-4c22-8aa3-15f689037ddd"},{"location":{"line":13,"column":5},"keyword":"And ","text":"I click Settings from the Main Menu","id":"20e5f380-5e82-42c0-9ed8-ae210314a6fc"}],"id":"a3eb0b01-55e6-4c67-934a-bb7f4a4313a1"}}]}}},{"pickle":{"id":"b3dd2fff-5efe-4e82-b782-3d511e8add91","uri":"file:///Users/ayobamielutade/Desktop/Tech%20Stack%202024/mobile-app%20automation/appium/affinityClick/src/test/resources/features/settings.feature","name":"Validate user can navigate to Settings from Main Menu","language":"en","steps":[{"text":"I am on the login screen in Settings Steps","id":"d387fb7c-6f41-4453-998d-508f4b633034","astNodeIds":["c318c64d-98ab-4122-9696-17fdce4eb7ef"]},{"text":"I enter valid username and password in Settings Steps","id":"8e111693-bdf9-45a5-b536-54342e3ef47f","astNodeIds":["92026486-e12e-40ee-b0a3-1b9978d9cf5c"]},{"text":"I tap the login button in Settings Steps","id":"e17db633-7f2f-456c-8891-853b61bf3c26","astNodeIds":["3abe809f-ef6d-47f5-acca-d0cfe5cbf23f"]},{"text":"I accept all permissions in Settings Steps","id":"eac4549f-c518-4802-8425-bfbd57ad846b","astNodeIds":["d5580908-76e0-457d-bf8d-dd82a681f051"]},{"text":"I should be logged in successfully in Settings Steps","id":"0b5206f7-f6fa-4abe-99e4-e0122b3c8289","astNodeIds":["284dc174-1e73-4c22-8aa3-15f689037ddd"]},{"text":"I click Settings from the Main Menu","id":"87c8562f-fac2-4804-b371-e6bdb96a5d2a","astNodeIds":["20e5f380-5e82-42c0-9ed8-ae210314a6fc"]}],"astNodeIds":["a3eb0b01-55e6-4c67-934a-bb7f4a4313a1"]}},{"testCase":{"id":"223c8ea1-5a6b-46f6-a006-32066ac8e9bf","pickleId":"a55a22ec-8220-4fd8-903c-289f487a362d","testSteps":[{"id":"c7e734b6-c680-41fe-8c53-0def9341dd76","pickleStepId":"993cd10a-a773-4376-907c-08b924265a1f","stepDefinitionIds":["9113682f-c3e1-4eb3-8884-3ab5514b3bde"],"stepMatchArgumentsLists":[{}]},{"id":"f4fbad09-5266-49b6-b4ec-1c08b6c04953","pickleStepId":"9adc6a96-4cd0-4425-8b38-a8447ca7b29d","stepDefinitionIds":["d01fa474-264e-46e2-ae55-7235341b1272"],"stepMatchArgumentsLists":[{}]},{"id":"afcfcbaf-2349-4c22-b960-c7a8f2f4ec06","pickleStepId":"00e41895-e796-4039-b684-62e8627a4514","stepDefinitionIds":["a1ce81f4-bb32-4223-b757-bc60cc6ff0db"],"stepMatchArgumentsLists":[{}]},{"id":"940f5619-aa12-43ef-b083-fdbd3903a465","pickleStepId":"8fe3b47f-b6d9-4278-bee0-871c923021e8","stepDefinitionIds":["83845ced-406a-4db2-a86a-f22e753b3996"],"stepMatchArgumentsLists":[{}]},{"id":"d49ce116-19ac-4472-b028-ec8e038d76cd","pickleStepId":"3bda1328-3042-458a-8d70-66041f4f603a","stepDefinitionIds":["f84504f1-dad9-4fbc-9e24-e3afff5cf039"],"stepMatchArgumentsLists":[{}]}]}},{"testCaseStarted":{"timestamp":{"seconds":"1712481525","nanos":818000000},"testCaseId":"223c8ea1-5a6b-46f6-a006-32066ac8e9bf","id":"d6d22983-bc03-4fa0-bd7d-b939750c06af"}},{"testStepStarted":{"timestamp":{"seconds":"1712481525","nanos":828000000},"testStepId":"c7e734b6-c680-41fe-8c53-0def9341dd76","testCaseStartedId":"d6d22983-bc03-4fa0-bd7d-b939750c06af"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"15","nanos":339000000}},"timestamp":{"seconds":"1712481541","nanos":167000000},"testStepId":"c7e734b6-c680-41fe-8c53-0def9341dd76","testCaseStartedId":"d6d22983-bc03-4fa0-bd7d-b939750c06af"}},{"testStepStarted":{"timestamp":{"seconds":"1712481541","nanos":185000000},"testStepId":"f4fbad09-5266-49b6-b4ec-1c08b6c04953","testCaseStartedId":"d6d22983-bc03-4fa0-bd7d-b939750c06af"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"1","nanos":991000000}},"timestamp":{"seconds":"1712481543","nanos":176000000},"testStepId":"f4fbad09-5266-49b6-b4ec-1c08b6c04953","testCaseStartedId":"d6d22983-bc03-4fa0-bd7d-b939750c06af"}},{"testStepStarted":{"timestamp":{"seconds":"1712481543","nanos":191000000},"testStepId":"afcfcbaf-2349-4c22-b960-c7a8f2f4ec06","testCaseStartedId":"d6d22983-bc03-4fa0-bd7d-b939750c06af"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"nanos":562000000}},"timestamp":{"seconds":"1712481543","nanos":753000000},"testStepId":"afcfcbaf-2349-4c22-b960-c7a8f2f4ec06","testCaseStartedId":"d6d22983-bc03-4fa0-bd7d-b939750c06af"}},{"testStepStarted":{"timestamp":{"seconds":"1712481543","nanos":761000000},"testStepId":"940f5619-aa12-43ef-b083-fdbd3903a465","testCaseStartedId":"d6d22983-bc03-4fa0-bd7d-b939750c06af"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"12","nanos":449000000}},"timestamp":{"seconds":"1712481556","nanos":210000000},"testStepId":"940f5619-aa12-43ef-b083-fdbd3903a465","testCaseStartedId":"d6d22983-bc03-4fa0-bd7d-b939750c06af"}},{"testStepStarted":{"timestamp":{"seconds":"1712481556","nanos":218000000},"testStepId":"d49ce116-19ac-4472-b028-ec8e038d76cd","testCaseStartedId":"d6d22983-bc03-4fa0-bd7d-b939750c06af"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"nanos":650000000}},"timestamp":{"seconds":"1712481556","nanos":868000000},"testStepId":"d49ce116-19ac-4472-b028-ec8e038d76cd","testCaseStartedId":"d6d22983-bc03-4fa0-bd7d-b939750c06af"}},{"testCaseFinished":{"timestamp":{"seconds":"1712481556","nanos":875000000},"testCaseStartedId":"d6d22983-bc03-4fa0-bd7d-b939750c06af"}},{"testCase":{"id":"6b25889b-0d15-4017-b9ae-0186e979e6ef","pickleId":"600ae91a-ab1f-405d-883e-fdd6f44efc3a","testSteps":[{"id":"5c372074-a9a1-4d4a-a869-c3a0d74f1775","pickleStepId":"3bc963db-43d8-4358-a45f-4e7915ef86ef","stepDefinitionIds":["2679651c-8f96-4180-97f3-59f0b44778ff"],"stepMatchArgumentsLists":[{}]},{"id":"eb59d337-b143-4643-9573-bd957e55d1f7","pickleStepId":"f50dbf47-474a-48c0-82bc-1ad91bdb71d1","stepDefinitionIds":["c7888a80-9529-4e6c-ae22-6d1867b90266"],"stepMatchArgumentsLists":[{}]},{"id":"90269471-fb07-40ea-8c0c-1a6ff89a0192","pickleStepId":"87aef02d-40eb-4f60-a12e-b6eb49105a65","stepDefinitionIds":["51d783aa-9f44-4143-96a1-75aa57555655"],"stepMatchArgumentsLists":[{}]},{"id":"666f7be2-4262-449e-95fc-42682cb9b4dd","pickleStepId":"5f9bbe16-374c-41e4-98ac-953e1c827ef5","stepDefinitionIds":["8f04bbd6-f7bd-4e86-8f25-f2b2f65a0e72"],"stepMatchArgumentsLists":[{}]},{"id":"e1cfe7dc-22c1-4455-aba0-90782a8c2d27","pickleStepId":"6f67aeb2-45b3-42d0-b768-5232474d3a03","stepDefinitionIds":["31e0e62a-4d19-449d-be73-e96e20127a25"],"stepMatchArgumentsLists":[{}]}]}},{"testCaseStarted":{"timestamp":{"seconds":"1712481556","nanos":909000000},"testCaseId":"6b25889b-0d15-4017-b9ae-0186e979e6ef","id":"35fa7125-c87f-4afa-8eff-e315c0da0728"}},{"testStepStarted":{"timestamp":{"seconds":"1712481556","nanos":912000000},"testStepId":"5c372074-a9a1-4d4a-a869-c3a0d74f1775","testCaseStartedId":"35fa7125-c87f-4afa-8eff-e315c0da0728"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"14","nanos":409000000}},"timestamp":{"seconds":"1712481571","nanos":321000000},"testStepId":"5c372074-a9a1-4d4a-a869-c3a0d74f1775","testCaseStartedId":"35fa7125-c87f-4afa-8eff-e315c0da0728"}},{"testStepStarted":{"timestamp":{"seconds":"1712481571","nanos":326000000},"testStepId":"eb59d337-b143-4643-9573-bd957e55d1f7","testCaseStartedId":"35fa7125-c87f-4afa-8eff-e315c0da0728"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"1","nanos":982000000}},"timestamp":{"seconds":"1712481573","nanos":308000000},"testStepId":"eb59d337-b143-4643-9573-bd957e55d1f7","testCaseStartedId":"35fa7125-c87f-4afa-8eff-e315c0da0728"}},{"testStepStarted":{"timestamp":{"seconds":"1712481573","nanos":310000000},"testStepId":"90269471-fb07-40ea-8c0c-1a6ff89a0192","testCaseStartedId":"35fa7125-c87f-4afa-8eff-e315c0da0728"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"nanos":607000000}},"timestamp":{"seconds":"1712481573","nanos":917000000},"testStepId":"90269471-fb07-40ea-8c0c-1a6ff89a0192","testCaseStartedId":"35fa7125-c87f-4afa-8eff-e315c0da0728"}},{"testStepStarted":{"timestamp":{"seconds":"1712481573","nanos":920000000},"testStepId":"666f7be2-4262-449e-95fc-42682cb9b4dd","testCaseStartedId":"35fa7125-c87f-4afa-8eff-e315c0da0728"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"4","nanos":469000000}},"timestamp":{"seconds":"1712481578","nanos":389000000},"testStepId":"666f7be2-4262-449e-95fc-42682cb9b4dd","testCaseStartedId":"35fa7125-c87f-4afa-8eff-e315c0da0728"}},{"testStepStarted":{"timestamp":{"seconds":"1712481578","nanos":392000000},"testStepId":"e1cfe7dc-22c1-4455-aba0-90782a8c2d27","testCaseStartedId":"35fa7125-c87f-4afa-8eff-e315c0da0728"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"2","nanos":346000000}},"timestamp":{"seconds":"1712481580","nanos":738000000},"testStepId":"e1cfe7dc-22c1-4455-aba0-90782a8c2d27","testCaseStartedId":"35fa7125-c87f-4afa-8eff-e315c0da0728"}},{"testCaseFinished":{"timestamp":{"seconds":"1712481580","nanos":748000000},"testCaseStartedId":"35fa7125-c87f-4afa-8eff-e315c0da0728"}},{"testCase":{"id":"0ae9dc2e-e3e2-434a-8f8f-4f9fe35b4382","pickleId":"0aa1d5a0-878d-48a4-808e-0191d30cb747","testSteps":[{"id":"8713df77-d3b7-4988-9065-5c0bc6fd1c62","pickleStepId":"8d732180-6d70-46eb-b695-c1b49a326ba6","stepDefinitionIds":["f1f27f9e-b4ff-45ea-9c42-cdd6f058c0ba"],"stepMatchArgumentsLists":[{}]},{"id":"5cbcea3e-72c5-4087-a3a6-cf1ac686b6b2","pickleStepId":"2da2d811-6a00-49fb-ba2e-67c8fdf9f1dd","stepDefinitionIds":["1dbaeb89-6c30-4dcc-bcaf-44ef5369250e"],"stepMatchArgumentsLists":[{}]},{"id":"0ab6e852-7794-489e-ae8d-a7147174fe83","pickleStepId":"bd84cb79-baa1-4af6-9800-4dfe6fccc95c","stepDefinitionIds":["f17c08a1-66ae-40cd-a3c4-29b0381e8245"],"stepMatchArgumentsLists":[{}]},{"id":"4f063b32-20f8-4576-88dd-29fb59d4b020","pickleStepId":"429a85c1-9e51-4fcb-996b-d98a0feee697","stepDefinitionIds":["79c82b6e-07db-4632-92c6-99a86ac7c55d"],"stepMatchArgumentsLists":[{}]}]}},{"testCaseStarted":{"timestamp":{"seconds":"1712481580","nanos":768000000},"testCaseId":"0ae9dc2e-e3e2-434a-8f8f-4f9fe35b4382","id":"b15a1335-02f1-4e55-8fc0-e9125e46f4f0"}},{"testStepStarted":{"timestamp":{"seconds":"1712481580","nanos":770000000},"testStepId":"8713df77-d3b7-4988-9065-5c0bc6fd1c62","testCaseStartedId":"b15a1335-02f1-4e55-8fc0-e9125e46f4f0"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"13","nanos":366000000}},"timestamp":{"seconds":"1712481594","nanos":136000000},"testStepId":"8713df77-d3b7-4988-9065-5c0bc6fd1c62","testCaseStartedId":"b15a1335-02f1-4e55-8fc0-e9125e46f4f0"}},{"testStepStarted":{"timestamp":{"seconds":"1712481594","nanos":143000000},"testStepId":"5cbcea3e-72c5-4087-a3a6-cf1ac686b6b2","testCaseStartedId":"b15a1335-02f1-4e55-8fc0-e9125e46f4f0"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"1","nanos":477000000}},"timestamp":{"seconds":"1712481595","nanos":620000000},"testStepId":"5cbcea3e-72c5-4087-a3a6-cf1ac686b6b2","testCaseStartedId":"b15a1335-02f1-4e55-8fc0-e9125e46f4f0"}},{"testStepStarted":{"timestamp":{"seconds":"1712481595","nanos":624000000},"testStepId":"0ab6e852-7794-489e-ae8d-a7147174fe83","testCaseStartedId":"b15a1335-02f1-4e55-8fc0-e9125e46f4f0"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"nanos":561000000}},"timestamp":{"seconds":"1712481596","nanos":185000000},"testStepId":"0ab6e852-7794-489e-ae8d-a7147174fe83","testCaseStartedId":"b15a1335-02f1-4e55-8fc0-e9125e46f4f0"}},{"testStepStarted":{"timestamp":{"seconds":"1712481596","nanos":186000000},"testStepId":"4f063b32-20f8-4576-88dd-29fb59d4b020","testCaseStartedId":"b15a1335-02f1-4e55-8fc0-e9125e46f4f0"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"nanos":952000000}},"timestamp":{"seconds":"1712481597","nanos":138000000},"testStepId":"4f063b32-20f8-4576-88dd-29fb59d4b020","testCaseStartedId":"b15a1335-02f1-4e55-8fc0-e9125e46f4f0"}},{"testCaseFinished":{"timestamp":{"seconds":"1712481597","nanos":139000000},"testCaseStartedId":"b15a1335-02f1-4e55-8fc0-e9125e46f4f0"}},{"testCase":{"id":"fc4676ce-c9cb-443a-b412-e66ed97b726e","pickleId":"a72db12a-1a20-4d1a-a0e8-e81401b2dd04","testSteps":[{"id":"c6d5cdd7-1f56-40ce-9fad-6784226d1e4f","pickleStepId":"025120a6-6535-4caf-9c1f-7c1a038f9cdf","stepDefinitionIds":["94cdce41-c1a6-464a-ac5f-b85c1b3d1d42"],"stepMatchArgumentsLists":[{}]},{"id":"27b2b3a9-2612-4958-aae4-b83e0b51fbd6","pickleStepId":"f911d059-038d-41a2-b1e3-1026351a6caf","stepDefinitionIds":["b56745b2-4f80-4d05-85ad-9fa23831fc85"],"stepMatchArgumentsLists":[{}]},{"id":"57baa81c-d008-4090-9e03-fce284617709","pickleStepId":"970c0729-b334-46a7-8534-1698a4f62aa9","stepDefinitionIds":["dec354f4-5dd1-46f2-9f05-c1fccaa55654"],"stepMatchArgumentsLists":[{}]},{"id":"ffc33164-e70b-493c-90de-b7d610415994","pickleStepId":"f40e76d8-b5bf-4444-8bf0-d67e370f8571","stepDefinitionIds":["962504ad-f743-4ced-90fd-f89e4a98af72"],"stepMatchArgumentsLists":[{}]},{"id":"2b187996-a7ab-478f-8110-c57f0086cb74","pickleStepId":"3804009e-d267-4524-9a95-21aec6195e9a","stepDefinitionIds":["479d9d7d-4097-4d13-abe3-5c3e19b40d6c"],"stepMatchArgumentsLists":[{}]}]}},{"testCaseStarted":{"timestamp":{"seconds":"1712481597","nanos":159000000},"testCaseId":"fc4676ce-c9cb-443a-b412-e66ed97b726e","id":"4835f426-f463-4b7f-af3a-0dfe6f9c0ab9"}},{"testStepStarted":{"timestamp":{"seconds":"17124815
