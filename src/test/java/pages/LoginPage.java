@@ -23,6 +23,12 @@ public class LoginPage {
     @AndroidFindBy(id = "com.android.permissioncontroller:id/permission_allow_button")
     private MobileElement allowButton;
 
+    @AndroidFindBy(id = "com.android.permissioncontroller:id/permission_allow_button")
+    private MobileElement secondAllowButton;
+
+    @AndroidFindBy(id = "com.android.permissioncontroller:id/permission_allow_button")
+    private MobileElement thirdAllowButton;
+
     @AndroidFindBy(id = "com.hushed.staging:id/signup_etEmail")
     private MobileElement signUpEmailField;
 
@@ -43,6 +49,12 @@ public class LoginPage {
 
     @AndroidFindBy(id = "com.hushed.staging:id/btnAgree")
     private MobileElement gotItPermissionButton;
+
+    @AndroidFindBy(id = "com.hushed.staging:id/btnAgree")
+    private MobileElement secondGotItPermissionButton;
+
+    @AndroidFindBy(id = "com.hushed.staging:id/btnAgree")
+    private MobileElement thirdItPermissionButton;
 
     @AndroidFindBy(id = "com.android.permissioncontroller:id/permission_allow_foreground_only_button")
     private MobileElement audioPermission;
@@ -125,6 +137,24 @@ public class LoginPage {
         audioPermission.click();
         locationPermission.click();
         phonePermission.click();
+    }
+
+    public void acceptTheGotItPermissionForSignUp() {
+        gotItPermissionButton.click();
+        secondGotItPermissionButton.click();
+        audioPermission.click();
+        allowButton.click();
+        secondAllowButton.click();
+        thirdItPermissionButton.click();
+        WebDriverWait wait = new WebDriverWait(driver, 45); // Wait for up to 30 seconds
+        WebElement thirdAllowButton = wait
+                .until(ExpectedConditions.visibilityOfElementLocated(
+                        By.id("com.hushed.staging:id/btnAgree")));
+        thirdAllowButton.click();
+
+        // audioPermission.click();
+        // locationPermission.click();
+        // phonePermission.click();
     }
 
     public void checkLoginAreItemsAreVisible() {
