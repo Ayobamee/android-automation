@@ -12,7 +12,7 @@ import filereader.readProperties;
 
 public class signUpSteps {
 
-    private static final String CHARACTERS = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    private static final String CHARACTERS = "0123456789";
     private static final SecureRandom random = new SecureRandom();
 
     public static String generateRandomEmail(int length) {
@@ -40,9 +40,9 @@ public class signUpSteps {
 
     @When("I enter valid username and password combination on the login-signup screen")
     public void iEnterValidUsernameAndPasswordOfTheApp() throws IOException {
-        String randomEmail = generateRandomEmail(6);
+        String randomEmail = generateRandomEmail(2);
         readProperties readTestData = new readProperties();
-        loginPage.enterSignUpUsername(randomEmail);
+        loginPage.enterSignUpUsername("ayobami+" + randomEmail);
         loginPage.enterSignUpPassword((String) readTestData.getPassword());
     }
 

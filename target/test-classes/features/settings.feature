@@ -11,3 +11,4 @@ Feature: Access Settings from Main Menu
     And I accept all permissions in Settings Steps
     And I should be logged in successfully in Settings Steps
     And I click Settings from the Main Menu
+    Then I should see settings items in the App Settings

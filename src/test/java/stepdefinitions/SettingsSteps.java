@@ -5,6 +5,7 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.SessionManager.StartDriverSession;
 import pages.LoginPage;
@@ -21,7 +22,9 @@ public class SettingsSteps {
     @Given("I am on the login screen in Settings Steps")
     public void iAmOnTheLoginScreenInSettingsSteps() throws Exception {
 
-        driver = (AndroidDriver<AndroidElement>) StartDriverSession.initializeDriver("Android"); // Make sure this method returns an AppiumDriver
+        driver = (AndroidDriver<AndroidElement>) StartDriverSession.initializeDriver("Android"); // Make sure this
+                                                                                                 // method returns an
+                                                                                                 // AppiumDriver
         loginPage = new LoginPage(driver);
         mainMenuPage = new MainMenuPage(driver); // Initialize here, after driver is instantiated
         loginPage.clickLoginButton();
@@ -53,6 +56,12 @@ public class SettingsSteps {
     }
 
     @And("I click Settings from the Main Menu")
-    public void iClickSettings() {mainMenuPage.clickSettingsTag();
+    public void iClickSettings() {
+        mainMenuPage.clickSettingsTag();
+    }
+
+    @Then("I should see settings items in the App Settings")
+    public void iSeeSettingsItemsinAppSettings() {
+        mainMenuPage.viewItemsInSettings();
     }
 }

@@ -34,4 +34,33 @@ public class MainMenuPage {
 
     }
 
+    public void viewItemsInSettings() {
+
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebElement helpFeedbackTxt = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(
+                "//android.widget.TextView[contains(@text, 'Help & Feedback')]")));
+        assertTrue(helpFeedbackTxt.isDisplayed());
+
+        WebDriverWait secondWait = new WebDriverWait(driver, 10);
+        WebElement accountTxt = secondWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(
+                "//android.widget.TextView[contains(@text, 'Account')]")));
+        assertTrue(accountTxt.isDisplayed());
+
+        WebDriverWait thirdWait = new WebDriverWait(driver, 10);
+        WebElement notificationsTxt = thirdWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(
+                "//android.widget.TextView[contains(@text, 'Notifications')]")));
+        assertTrue(notificationsTxt.isDisplayed());
+
+        WebDriverWait fourthWait = new WebDriverWait(driver, 10);
+        WebElement deviceSoundTxt = fourthWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(
+                "//android.widget.TextView[contains(@text, 'Device & Sounds')]")));
+        assertTrue(deviceSoundTxt.isDisplayed());
+
+        WebDriverWait fifthWait = new WebDriverWait(driver, 10);
+        WebElement versionUpdatesTxt = fifthWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(
+                "//android.widget.TextView[contains(@text, 'Version & Updates')]")));
+        assertTrue(versionUpdatesTxt.isDisplayed());
+
+    }
+
 }
