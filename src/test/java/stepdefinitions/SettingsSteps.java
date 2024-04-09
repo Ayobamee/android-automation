@@ -10,12 +10,15 @@ import io.cucumber.java.en.When;
 import org.SessionManager.StartDriverSession;
 import pages.LoginPage;
 import pages.MainMenuPage;
+import pages.SettingsPage;
+
 import java.io.IOException;
 
 public class SettingsSteps {
 
     private LoginPage loginPage;
     private MainMenuPage mainMenuPage;
+    private SettingsPage settingsPage;
     private AndroidDriver<AndroidElement> driver;
 
     @SuppressWarnings("unchecked")
@@ -26,7 +29,8 @@ public class SettingsSteps {
                                                                                                  // method returns an
                                                                                                  // AppiumDriver
         loginPage = new LoginPage(driver);
-        mainMenuPage = new MainMenuPage(driver); // Initialize here, after driver is instantiated
+        mainMenuPage = new MainMenuPage(driver);
+        settingsPage = new SettingsPage(driver);
         loginPage.clickLoginButton();
 
     }
@@ -62,6 +66,6 @@ public class SettingsSteps {
 
     @Then("I should see settings items in the App Settings")
     public void iSeeSettingsItemsinAppSettings() {
-        mainMenuPage.viewItemsInSettings();
+        settingsPage.viewItemsInSettings();
     }
 }
